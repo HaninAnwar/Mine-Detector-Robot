@@ -1,8 +1,8 @@
-#include "STD_TYPES.h"
+#include "../LIB/STD_TYPES.h"
 #include <util/delay.h>
 
-#include "DIO_interface.h"
-#include "TIMER_interface.h"
+#include "../MCAL/DIO_interface.h"
+#include "../MCAL/TIMER_interface.h"
 
 #include "MOTOR_config.h"
 #include "MOTOR_interface.h"

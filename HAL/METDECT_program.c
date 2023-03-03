@@ -1,11 +1,11 @@
-#include "BIT_MATH.h"
-#include "STD_TYPES.h"
+#include "../LIB/BIT_MATH.h"
+#include "../LIB/STD_TYPES.h"
 
 #include "METDECT_config.h"
 #include "METDECT_interface.h"
 #include "METDECT_private.h"
 
-#include "EXTI_interface.h"
+#include "../MCAL/EXTI_interface.h"
 
 static u8 METDECT_MineFlag = METDECT_NO_MINE;
 

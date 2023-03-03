@@ -1,17 +1,17 @@
-#include "STD_TYPES.h"
+#include "LIB/STD_TYPES.h"
 #include <util/delay.h>
 
-#include "DIO_interface.h"
-#include "PORT_interface.h"
-#include "TIMER_interface.h"
-#include "GIE_interface.h"
-#include "EXTI_interface.h"
-#include "USART_interface.h"
+#include "MCAL/DIO_interface.h"
+#include "MCAL/PORT_interface.h"
+#include "MCAL/TIMER_interface.h"
+#include "MCAL/GIE_interface.h"
+#include "MCAL/EXTI_interface.h"
+#include "MCAL/USART_interface.h"
 
-#include "ULTSONC_interface.h"
-#include "BLTH_interface.h"
-#include "METDECT_interface.h"
-#include "MOTOR_interface.h"
+#include "HAL/ULTSONC_interface.h"
+#include "HAL/BLTH_interface.h"
+#include "HAL/METDECT_interface.h"
+#include "HAL/MOTOR_interface.h"
 
 
 DC_Motor Left_Motor,Right_Motor;
@@ -41,10 +41,10 @@ void main(void)
 	/*Port Initialization*/
 	PORT_voidInit();
 
-	/*Initialize timer1B for generate trigger pulse each 1ms*/
+	/*Initialize timer1B for generate trigger pulses*/
 	TIMER1_u8Init(TIMER1_CHANNEL_B,NORMAL,DISCONNECT,TIMER_DIV_BY_1);
 
-	/*Initialize timer1A for echo pulse calculation*/
+	/*Initialize timer1A for echo pulses */
 	TIMER1_u8Init(TIMER1_CHANNEL_A,NORMAL,DISCONNECT,TIMER_DIV_BY_1);
 
 	/*Initialize timer0 for PWM1 */
@@ -97,7 +97,7 @@ void main(void)
 
 				/*Send notification*/
 				USART_voidSendString("MineDetected");
-				_delay_ms(750);
+
 				break;
 			}
 

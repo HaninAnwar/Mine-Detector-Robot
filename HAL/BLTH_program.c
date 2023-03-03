@@ -1,10 +1,11 @@
-#include "STD_TYPES.h"
+#include "../LIB/STD_TYPES.h"
+
+#include "../MCAL/USART_interface.h"
 
 #include "BLTH_config.h"
 #include "BLTH_interface.h"
 #include "BLTH_private.h"
 
-#include "USART_interface.h"
 
 void Bluetooth(void);
 

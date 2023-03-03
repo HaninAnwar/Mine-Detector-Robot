@@ -7,11 +7,11 @@
 /***********************************************************************/
 /***********************************************************************/
 
-#include "STD_TYPES.h"
+#include "../LIB/STD_TYPES.h"
 #include <util/delay.h>
 
-#include "TIMER_interface.h"
-#include "DIO_interface.h"
+#include "../MCAL/TIMER_interface.h"
+#include "../MCAL/DIO_interface.h"
 
 #include "ULTSONC_config.h"
 #include "ULTSONC_interface.h"
